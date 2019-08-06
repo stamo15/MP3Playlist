@@ -227,11 +227,15 @@ namespace MP3Playlist.Controllers
 
         private void deleteOldBlobs(SampleEntity sampleEntity)
         {
+            // Create the TableOperation that updates the sample entity.
+            var updateOperation = TableOperation.InsertOrReplace(sampleEntity);
+
             // Deleting uploaded MP3 blob
             if (sampleEntity.Mp3Blob != null)
             {
                 var mp3Blob = getPlaylistBlobContainer().GetBlockBlobReference("uploads/" + sampleEntity.Mp3Blob);
                 mp3Blob.DeleteIfExists();
+                sampleEntity.Mp3Blob = null;
             }
 
             // Deleting sample MP3 blob
@@ -239,7 +243,12 @@ namespace MP3Playlist.Controllers
             {
                 var sampleBlob = getPlaylistBlobContainer().GetBlockBlobReference("samples/" + sampleEntity.SampleMp3Blob);
                 sampleBlob.DeleteIfExists();
+                sampleEntity.SampleMp3Blob = null;
+                sampleEntity.SampleDate = null;
             }
+
+            // Execute the update operation.
+            table.Execute(updateOperation);
         }
 
         private String getNewMaxRowKeyValue()

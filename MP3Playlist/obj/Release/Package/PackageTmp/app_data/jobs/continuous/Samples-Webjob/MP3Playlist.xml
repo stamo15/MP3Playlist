@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MP3Playlist</name>
+    </assembly>
+    <members>
+        <member name="M:MP3Playlist.Controllers.DataController.Get(System.String)">
+            <summary>
+            Get the sample blob
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MP3Playlist.Controllers.DataController.Put(System.String)">
+            <summary>
+            Update the blob sample
+            </summary>
+            <param name="id"></param>
+            <param name="sample"></param>
+            /// <returns></returns>
+        </member>
+        <member name="M:MP3Playlist.Controllers.SamplesController.Get">
+            <summary>
+            Get all samples
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MP3Playlist.Controllers.SamplesController.Get(System.String)">
+            <summary>
+            Get a single sample
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MP3Playlist.Controllers.SamplesController.Post(MP3Playlist.Models.Sample)">
+            <summary>
+            Create a new sample
+            </summary>
+            <param name="sample"></param>
+        </member>
+        <member name="M:MP3Playlist.Controllers.SamplesController.Put(System.String,MP3Playlist.Models.Sample)">
+            <summary>
+            Update a sample
+            </summary>
+            <param name="id"></param>
+            <param name="sample"></param>
+            /// <returns></returns>
+        </member>
+        <member name="M:MP3Playlist.Controllers.SamplesController.Delete(System.String)">
+            <summary>
+            Delete a sample
+            </summary>
+            <param name="id"></param>
+            /// <returns></returns>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.SampleID">
+            <summary>
+            Sample ID
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.Title">
+            <summary>
+            Title of sample
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.Artist">
+            <summary>
+            Name of Artist
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.CreatedDate">
+            <summary>
+            Creation date/time of entity
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.Mp3Blob">
+            <summary>
+            Name of uploaded blob in storage
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.SampleMp3Blob">
+            <summary>
+            Name of sample blob in storage
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.SampleMp3URL">
+            <summary>
+            Web service resource URL of MP3 sample
+            </summary>
+        </member>
+        <member name="P:MP3Playlist.Models.Sample.SampleDate">
+            <summary>
+            Creation date/time of sample blob
+            </summary>
+        </member>
+    </members>
+</doc>
